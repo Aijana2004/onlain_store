@@ -1,0 +1,16 @@
+
+    <p>Name: {{product.product_name}}</p>
+    {% if product.category %}
+       <p>Category: {{product.category}}</p>
+    {% else %}
+        <p>no category </p>
+    {% endif %}
+    <p>Name: {{product.product_name}}</p>
+    <p>Description: {{product.description}}</p>
+    <p>Price: {{product.price}}</p>
+    <p>Active: {{product.active}}</p>
+    <p>Date: {{product.date}}</p>
+
+
+    <button><a href="{% url 'product_update' product.pk %}">Update</a></button>
+    <button><a href="{% url 'product_delete' product.pk %}">Delete</a></button>
